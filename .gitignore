@@ -1,0 +1,59 @@
+# Node.js dependencies
+/node_modules/
+
+# Build output
+/build/
+/dist/
+
+# React Native
+# If you're using React Native, uncomment the next line
+# /android/
+/ios/
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE/editor specific files
+.vscode/
+/.idea/
+/*.sublime-workspace
+
+# .env files for environment variables (should not be tracked for security reasons)
+.env
+.env.local
+.env.*.local
+
+# npm logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Parcel Bundler cache
+.cache/
+
+# Next.js build (if you're using Next.js with React)
+.next/
+
+# React Native Metro bundler cache
+/metro-cache/
+
+# Storybook (if you're using Storybook)
+.storybook/
+
+# Coverage reports (if you're running code coverage)
+coverage/
+
+# temporary files and folders
+*.bak
+*.swp
+*.swo
+
+# yarn.lock / package-lock.json (optional)
+# If you're using Yarn, you can ignore package-lock.json, or vice versa
+# If you don't want to track lock files, uncomment the following:
+# package-lock.json
+# yarn.lock

@@ -1,0 +1,158 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+/* Body styling for background and general alignment */
+body {
+  background-color: #e9eff9;
+  font-family: "Arial", sans-serif;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container for the whole calculator */
+.container {
+  width: 100%;
+  max-width: 450px;
+  margin: 50px auto;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Hover effect on container */
+.container:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading style */
+h2 {
+  text-align: center;
+  font-size: 2.4rem;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+/* Form styling */
+form div {
+  margin-bottom: 25px;
+}
+
+/* Label styling */
+label {
+  display: block;
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+/* Input styling */
+input[type="text"] {
+  width: 100%;
+  padding: 14px;
+  font-size: 1.1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+}
+
+input[type="text"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
+}
+
+/* Button Styling */
+button {
+  width: 48%;
+  padding: 12px;
+  font-size: 1.1rem;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+button[type="submit"]:nth-child(2) {
+  background-color: #ff6347;
+}
+
+button[type="submit"]:nth-child(2):hover {
+  background-color: #cc4d36;
+}
+
+/* Results area */
+.bmi_val {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-top: 25px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.message {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #777;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+/* FadeIn animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 25px;
+    width: 90%;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  input[type="text"],
+  button {
+    font-size: 1rem;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  button:nth-child(2) {
+    margin-top: 5px;
+  }
+}
