@@ -9,12 +9,28 @@
 /* Body styling for background and general alignment */
 body {
   background-color: #e9eff9;
-  font-family: "Arial", sans-serif;
   color: #333;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  font-family: "Arial", sans-serif;
+}
+
+/* Color and font variables */
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #ff6347;
+  --hover-color: #0056b3;
+  --border-color: #ccc;
+  --white-color: #fff;
+  --light-text: #777;
+  --medium-text: #555;
+  --dark-text: #333;
+  --box-shadow-light: rgba(0, 0, 0, 0.1);
+  --box-shadow-dark: rgba(0, 0, 0, 0.2);
+  --focus-color: rgba(0, 123, 255, 0.4);
+  --transition-speed: 0.3s;
 }
 
 /* Container for the whole calculator */
@@ -23,22 +39,21 @@ body {
   max-width: 450px;
   margin: 50px auto;
   padding: 40px;
-  background: #ffffff;
+  background: var(--white-color);
   border-radius: 12px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease-in-out;
+  box-shadow: 0 8px 15px var(--box-shadow-light);
+  transition: box-shadow var(--transition-speed) ease-in-out;
 }
 
-/* Hover effect on container */
 .container:hover {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 20px var(--box-shadow-dark);
 }
 
 /* Heading style */
 h2 {
   text-align: center;
   font-size: 2.4rem;
-  color: #333;
+  color: var(--dark-text);
   font-weight: 600;
   margin-bottom: 30px;
   letter-spacing: 1px;
@@ -53,61 +68,62 @@ form div {
 label {
   display: block;
   font-size: 1.1rem;
-  color: #555;
+  color: var(--medium-text);
   margin-bottom: 8px;
   font-weight: 500;
 }
 
 /* Input styling */
-input[type="text"] {
+input[type="number"] {
   width: 100%;
   padding: 14px;
   font-size: 1.1rem;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border-color);
   border-radius: 6px;
   box-sizing: border-box;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  transition: border-color var(--transition-speed) ease,
+    box-shadow var(--transition-speed) ease;
   outline: none;
 }
 
-input[type="text"]:focus {
-  border-color: #007bff;
-  box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
+input[type="number"]:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 8px var(--focus-color);
 }
 
-/* Button Styling */
+/* Button styling */
 button {
   width: 48%;
   padding: 12px;
   font-size: 1.1rem;
   border: none;
-  background-color: #007bff;
-  color: white;
   border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color var(--transition-speed) ease, transform 0.2s ease;
   margin-top: 10px;
   font-weight: 600;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: var(--hover-color);
   transform: scale(1.05);
+  color: white;
 }
 
+/* Red Button */
 button[type="submit"]:nth-child(2) {
-  background-color: #ff6347;
+  background-color: var(--secondary-color);
 }
 
 button[type="submit"]:nth-child(2):hover {
-  background-color: #cc4d36;
+  background-color: darken(var(--secondary-color), 10%);
 }
 
 /* Results area */
 .bmi_val {
   font-size: 1.4rem;
   font-weight: bold;
-  color: #333;
+  color: var(--dark-text);
   text-align: center;
   margin-top: 25px;
   animation: fadeIn 1s ease-in-out;
@@ -116,7 +132,7 @@ button[type="submit"]:nth-child(2):hover {
 .message {
   font-size: 1.2rem;
   text-align: center;
-  color: #777;
+  color: var(--light-text);
   margin-top: 10px;
   font-weight: 500;
 }
@@ -142,7 +158,7 @@ button[type="submit"]:nth-child(2):hover {
     font-size: 2rem;
   }
 
-  input[type="text"],
+  input[type="number"],
   button {
     font-size: 1rem;
   }
